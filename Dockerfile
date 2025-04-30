@@ -10,8 +10,5 @@ ENV SPLUNKBASE_PASSWORD=$SPLUNKBASE_PASSWORD
 
 COPY inputs.conf /opt/splunk/etc/system/local/inputs.conf
 
-RUN /opt/splunk/bin/splunk app install https://splunkbase.splunk.com/app/2846/release/1.6.9/download
-RUN /opt/splunk/bin/splunk app install https://splunkbase.splunk.com/app/2800/release/1.6.4/download
-
 EXPOSE 8000 8088 9997
 CMD ["/opt/splunk/bin/splunk", "start", "--nodaemon"]
