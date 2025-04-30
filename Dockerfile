@@ -11,4 +11,3 @@ ENV SPLUNKBASE_PASSWORD=$SPLUNKBASE_PASSWORD
 COPY inputs.conf /opt/splunk/etc/system/local/inputs.conf
 
 EXPOSE 8000 8088 9997
-CMD ["/opt/splunk/bin/splunk", "start", "--nodaemon"]
